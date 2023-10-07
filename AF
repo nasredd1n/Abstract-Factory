@@ -3,7 +3,7 @@ import (
     "fmt"
 )
 func main(a) {
-	// Abstract factory uses code
+	
 	fmt.Println("------------ Abstract Factory")
 	factory := getFactory("MySQL")
 	if factory == nil {
