@@ -1,0 +1,19 @@
+package main
+import "fmt"
+func main(a) {
+	// Abstract factory uses code
+	fmt.Println("------------ Abstract Factory")
+	factory := getFactory("MySQL")
+	if factory == nil {
+	   fmt.Println("This storage mode is not supported")
+	   return
+	}
+ 
+	student := factory.createStudent()
+	score := factory.createScore()
+ 
+	student.insert()
+	student.update()
+	score.insert()
+	score.list()
+ }
